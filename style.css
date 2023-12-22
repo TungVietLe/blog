@@ -25,6 +25,10 @@
     /* scroll bar */
     --scrollbar-track: transparent;
     --scrollbar-thumb: #494949;
+
+    /* blog */
+    --blog-text-hover: #ffffff;
+    --blog-bg-hover: #121212;
 }
 
 /* scroll bar */
@@ -55,7 +59,7 @@ html {
 body {
     background-color: var(--bg);
     color: var(--text-primary);
-    margin: 7vh 12vw;
+    margin: 7vh 20em;
 }
 a {
     color: var(--link-text);
@@ -64,6 +68,10 @@ a {
 }
 a.secondary{
     color: inherit;
+}
+
+img {
+    border-radius: 12px;
 }
 
 pre {
@@ -109,4 +117,42 @@ button:hover {
 
 .secondary {
     color: var(--text-secondary);
+}
+
+
+.blog-container {
+    color: var(--text-secondary);
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between; gap: 20px;
+    align-items:center;
+    height: 10vh;
+    width: 100%;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    margin: 40px 0px;
+    padding: 16px 30px;
+    border-radius: 6px;
+}
+
+.blog-container img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 3px;
+}
+.blog-container .title {
+    position: absolute;
+    margin-left: 12vw;
+    font-size: medium;
+    max-width: 30vw;
+    text-wrap: wrap;
+}
+.blog-container:hover {
+    color: var(--blog-text-hover);
+    background-color: var(--blog-bg-hover);
+}
+
+.blog-container .time {
+    color: var(--text-secondary);
+    font-size: 12px;
 }
